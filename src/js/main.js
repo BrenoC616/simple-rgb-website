@@ -7,11 +7,12 @@ let rgbColor = {
 };
 
 function addColor(color) {
-  let colorSchema = `rgb(${rgbColor.red}, ${rgbColor.green}, ${rgbColor.blue})`;
-
+  
   if (rgbColor[color] < 255) {
-    rgbColor[color] += 1;
+    rgbColor[color]++;
   }
+  
+  let colorSchema = `rgb(${rgbColor.red}, ${rgbColor.green}, ${rgbColor.blue})`;
 
   bodyStyle.backgroundColor = colorCont.innerHTML = colorSchema;
 }
